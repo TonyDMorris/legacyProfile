@@ -1,3 +1,3 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/tonydmorris/pen/pQwWvx.
+A simple website for generating a javascript object literal for use in .replace() ciphers
 
  
