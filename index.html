@@ -6,32 +6,13 @@
     <title>Anthony Morris</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
-    <script src="./script.js"></script>
   </head>
   <body>
     <div class="slide-wrap">
-      <nav class="nav">
-        <a
-          onclick="changeColor('bio-nav')"
-          class="nav-link"
-          id="bio-nav"
-          href="#slide-1"
-          >Bio</a
-        >
-        <a
-          onclick="changeColor('projects-nav')"
-          class="nav-link"
-          id="projects-nav"
-          href="#slide-2"
-          >Projects</a
-        >
-        <a
-          onclick="changeColor('contact-nav')"
-          class="nav-link"
-          id="contact-nav"
-          href="#slide-3"
-          >Contact</a
-        >
+      <nav id="nav">
+        <a class="nav-link active" id="bio-nav" href="#slide-1">Bio</a>
+        <a class="nav-link" id="projects-nav" href="#slide-2">Projects</a>
+        <a class="nav-link" id="contact-nav" href="#slide-3">Contact</a>
       </nav>
 
       <div class="slider">
@@ -41,4 +22,5 @@
       </div>
     </div>
   </body>
+  <script src="./script.js"></script>
 </html>

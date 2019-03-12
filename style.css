@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-.nav {
+#nav {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: [blank] 60vw [bio] 10vw [projects] 10vw [contact] 10vw 10vw;
@@ -48,11 +48,11 @@
   text-align: center;
 }
 
-.nav-link:hover {
+.active {
   background-color: bisque;
 }
 
-.nav-link:active {
+.nav-link:hover {
   background-color: bisque;
 }
 

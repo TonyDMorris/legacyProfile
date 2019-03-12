@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.nav {
+#nav {
   display: grid;
   grid-template-columns: [blank] 60vw [bio] 10vw [projects]10vw [contact]10vw 10vw;
 
@@ -37,12 +37,13 @@
   height: 10vh;
   text-align: center;
 }
+.active {
+  background-color: bisque;
+}
 .nav-link:hover {
   background-color: bisque;
 }
-.nav-link:active {
-  background-color: bisque;
-}
+
 #bio-nav {
   grid-area: bio;
 }
