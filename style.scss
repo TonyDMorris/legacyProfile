@@ -56,6 +56,19 @@
 }
 #slide-1 {
   background-color: beige;
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+
+  #profile-image {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 320px;
+    width: 320px;
+    grid-column: 3;
+  }
+  p {
+    grid-column: 3;
+  }
 }
 #slide-2 {
   background-color: rgb(39, 93, 163);
