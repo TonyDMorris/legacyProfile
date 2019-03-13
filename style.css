@@ -7,13 +7,14 @@
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-weight: 500;
+  color: white;
 }
 
 #nav {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: [bio] 1fr [projects] 1fr [contact] 1fr;
-      grid-template-columns: [bio] 1fr [projects] 1fr [contact] 1fr;
+  -ms-grid-columns: [nothing] 7fr [bio] 1fr [projects] 1fr [contact] 1fr;
+      grid-template-columns: [nothing] 7fr [bio] 1fr [projects] 1fr [contact] 1fr;
   background-color: #870c35;
   height: 5vh;
   width: 100vw;
@@ -73,10 +74,10 @@
   padding-top: 7vh;
   display: -ms-grid;
   display: grid;
+  background-color: #870c35;
 }
 
 #slide-1 {
-  background-color: #870c35;
   -ms-grid-columns: 1fr 310px 1fr;
       grid-template-columns: 1fr 310px 1fr;
   -ms-grid-rows: 310px calc(100vh - 310px) 315px calc(100vh - 310px);
@@ -125,16 +126,28 @@
   background-color: #2e112d;
   color: white;
   border-radius: 5px;
-  padding: 10%;
+  padding: 5%;
   -webkit-box-shadow: 3px 3px 10px #2e112d;
           box-shadow: 3px 3px 10px #2e112d;
 }
 
 #slide-2 {
-  background-color: #275da3;
+  -ms-grid-rows: 50vh 50vh 50vh;
+      grid-template-rows: 50vh 50vh 50vh;
+}
+
+#slide-2 .card {
+  height: 100%;
+  font-size: 1em;
+  background-color: #2e112d;
+  padding: 5%;
+}
+
+#slide-2 .card i {
+  font-size: 8em;
 }
 
 #slide-3 {
-  background-color: #2b8567;
+  background-color: #f0673a;
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,11 +12,12 @@ $primary-lightest: #f0673a;
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-weight: 500;
+  color: white;
 }
 
 #nav {
   display: grid;
-  grid-template-columns: [bio] 1fr [projects]1fr [contact]1fr;
+  grid-template-columns: [nothing] 7fr [bio] 1fr [projects]1fr [contact]1fr;
   background-color: $primary;
   height: 5vh;
   width: 100vw;
@@ -64,11 +65,11 @@ $primary-lightest: #f0673a;
     scroll-snap-align: start;
     padding-top: 7vh;
     display: grid;
+    background-color: $primary;
   }
 }
 
 #slide-1 {
-  background-color: $primary;
   grid-template-columns: 1fr 310px 1fr;
   grid-template-rows: 310px calc(100vh - 310px) 315px calc(100vh - 310px);
 
@@ -104,13 +105,22 @@ $primary-lightest: #f0673a;
     background-color: $primary-darkest;
     color: white;
     border-radius: 5px;
-    padding: 10%;
+    padding: 5%;
     box-shadow: 3px 3px 10px $primary-darkest;
   }
 }
 #slide-2 {
-  background-color: rgb(39, 93, 163);
+  grid-template-rows: 50vh 50vh 50vh;
+  .card {
+    height: 100%;
+    font-size: 1em;
+    background-color: $primary-darkest;
+    padding: 5%;
+    i {
+      font-size: 8em;
+    }
+  }
 }
 #slide-3 {
-  background-color: rgb(43, 133, 103);
+  background-color: $primary-lightest;
 }
