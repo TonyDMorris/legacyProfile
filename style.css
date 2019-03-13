@@ -13,11 +13,13 @@
 #nav {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: [nothing] 7fr [bio] 1fr [projects] 1fr [contact] 1fr;
-      grid-template-columns: [nothing] 7fr [bio] 1fr [projects] 1fr [contact] 1fr;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-grid-columns: [nothing] 6fr [bio] 1fr [projects] 1fr [contact] 1fr;
+      grid-template-columns: [nothing] 6fr [bio] 1fr [projects] 1fr [contact] 1fr;
   background-color: #870c35;
   height: 5vh;
-  width: 100vw;
+  width: 99vw;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -27,7 +29,6 @@
   background-color: #540032;
   text-decoration: none;
   color: white;
-  padding: 5px;
   height: 5vh;
   text-align: center;
 }

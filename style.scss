@@ -17,10 +17,11 @@ $primary-lightest: #f0673a;
 
 #nav {
   display: grid;
-  grid-template-columns: [nothing] 7fr [bio] 1fr [projects]1fr [contact]1fr;
+  box-sizing: border-box;
+  grid-template-columns: [nothing] 6fr [bio] 1fr [projects]1fr [contact]1fr;
   background-color: $primary;
   height: 5vh;
-  width: 100vw;
+  width: 99vw;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -28,7 +29,7 @@ $primary-lightest: #f0673a;
     background-color: $primary-dark;
     text-decoration: none;
     color: white;
-    padding: 5px;
+
     height: 5vh;
     text-align: center;
   }
