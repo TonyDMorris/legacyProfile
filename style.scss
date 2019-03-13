@@ -1,13 +1,19 @@
+$primary: #007369;
+$primary-dark: #005a5b;
+$primary-darkest: #003840;
+$primary-light: #008c72;
+$primary-lightest: #02a676;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 1.08em;
 }
 
 #nav {
   display: grid;
-  grid-template-columns: [blank] 60vw [bio] 10vw [projects]10vw [contact]10vw 10vw;
-
+  grid-template-columns: [bio] 1fr [projects]1fr [contact]1fr;
   background-color: aquamarine;
   height: 10vh;
   width: 100vw;
@@ -31,17 +37,19 @@
   flex-shrink: 0;
   height: 100%;
   scroll-snap-align: start;
+  padding-top: 10vh;
+  display: grid;
+  border: solid black 1px;
 }
 .nav-link {
+  background-color: $primary;
   border: 1px solid black;
   height: 10vh;
   text-align: center;
 }
-.active {
-  background-color: bisque;
-}
+.active,
 .nav-link:hover {
-  background-color: bisque;
+  background-color: $primary-light;
 }
 
 #bio-nav {
@@ -55,19 +63,40 @@
   grid-area: contact;
 }
 #slide-1 {
-  background-color: beige;
-  display: grid;
-  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+  background-color: $primary-lightest;
+
+  grid-template-columns: 1fr 315px 1fr;
+  grid-template-rows: 315px calc(90vh - 315px) 315px calc(100vh - 315px);
 
   #profile-image {
     border-radius: 50%;
     overflow: hidden;
-    height: 320px;
-    width: 320px;
-    grid-column: 3;
+    grid-row: 1;
+    grid-column: 2;
+    border: solid 3px black;
+    img {
+      max-width: 180%;
+      max-height: 100%;
+    }
   }
-  p {
-    grid-column: 3;
+  #fun-image {
+    border-radius: 50%;
+    overflow: hidden;
+    grid-row: 3;
+    grid-column: 2;
+    border: solid 3px black;
+    img {
+      max-width: 180%;
+      max-height: 100%;
+    }
+  }
+  #bio-text {
+    border: solid 1px black;
+    grid-column: 1 / span 3;
+    background-color: $primary-darkest;
+    color: white;
+    border-radius: 5px;
+    padding: 10%;
   }
 }
 #slide-2 {
