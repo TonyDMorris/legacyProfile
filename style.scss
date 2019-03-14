@@ -80,7 +80,7 @@ $primary-lightest: #f0673a;
 
 #slide-1 {
   grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
-
+  grid-row-gap: 50px;
   .bio-images {
     height: 310px;
     width: 310px;
@@ -97,7 +97,7 @@ $primary-lightest: #f0673a;
   #fun-image {
     img {
       max-width: 180%;
-      max-height: 100%;
+      max-height: 110%;
     }
   }
   .bio-text {
@@ -107,6 +107,10 @@ $primary-lightest: #f0673a;
     border-radius: 5px;
     padding: 5%;
     box-shadow: 3px 3px 10px $primary-darkest;
+    h1 {
+      text-align: left;
+      padding-bottom: 7%;
+    }
   }
   @media only screen and (min-width: 700px) {
     grid-template-columns: 400px 1fr 400px;
