@@ -63,25 +63,29 @@ $primary-lightest: #f0673a;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   .slide {
+    box-sizing: border-box;
     width: 100%;
     flex-shrink: 0;
     height: 100%;
     scroll-snap-align: start;
-    padding-top: 7vh;
+    padding: 15px;
+    padding-top: 10vh;
     display: grid;
     background-color: $primary;
+    grid-template-rows: repeat(auto-fill, auto);
+    grid-row-gap: 1%;
+    grid-column-gap: 10px;
   }
 }
 
 #slide-1 {
   grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
-  grid-template-rows: repeat(auto-fill, auto);
+
   .bio-images {
     height: 310px;
     width: 310px;
     border-radius: 50%;
     overflow: hidden;
-
     border: solid 8px $primary-darkest;
   }
   #profile-image {
@@ -96,24 +100,47 @@ $primary-lightest: #f0673a;
       max-height: 100%;
     }
   }
-  #bio-text {
+  .bio-text {
     border: solid 1px black;
-
     background-color: $primary-darkest;
     color: white;
     border-radius: 5px;
     padding: 5%;
     box-shadow: 3px 3px 10px $primary-darkest;
   }
+  @media only screen and (min-width: 700px) {
+    grid-template-columns: 400px 1fr 400px;
+    #profile-text {
+      grid-column: 2 / span 2;
+    }
+    #fun-text {
+      grid-column: 1 / span 2;
+    }
+    #profile-image {
+      grid-column: 1;
+    }
+    #fun-image {
+      grid-column: 3;
+    }
+    .bio-images {
+      height: 400px;
+      width: 400px;
+    }
+  }
 }
 #slide-2 {
-  grid-template-columns: repeat(auto-fill, minmax(320px, 3fr));
-  grid-template-rows: repeat(auto-fill, auto);
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: 700px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .card {
-    height: 100%;
     font-size: 1em;
     background-color: $primary-darkest;
     padding: 5%;
+    box-shadow: 3px 3px 10px $primary-darkest;
+
     i {
       font-size: 8em;
     }
