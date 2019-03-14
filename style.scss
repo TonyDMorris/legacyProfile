@@ -18,10 +18,10 @@ $primary-lightest: #f0673a;
 #nav {
   display: grid;
   box-sizing: border-box;
-  grid-template-columns: [nothing] 6fr [bio] 1fr [projects]1fr [contact]1fr;
+  grid-template-columns: [bio] 1fr [skills] 1fr [projects]1fr [contact]1fr;
   background-color: $primary;
   height: 5vh;
-  width: 99vw;
+  width: 100vw;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -39,6 +39,9 @@ $primary-lightest: #f0673a;
   }
   #bio-nav {
     grid-area: bio;
+  }
+  #skills-nav {
+    grid-area: skills;
   }
 
   #projects-nav {
@@ -71,30 +74,23 @@ $primary-lightest: #f0673a;
 }
 
 #slide-1 {
-  grid-template-columns: 1fr 310px 1fr;
-  grid-template-rows: 310px calc(100vh - 310px) 315px calc(100vh - 310px);
-
-  #profile-image {
+  grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+  grid-template-rows: repeat(auto-fill, auto);
+  .bio-images {
+    height: 310px;
+    width: 310px;
     border-radius: 50%;
     overflow: hidden;
-    grid-row: 1;
-    grid-column: 2;
-    border: solid 8px $primary-darkest;
-    box-shadow: 3px 3px 10px $primary-darkest;
-    margin-bottom: 5%;
 
+    border: solid 8px $primary-darkest;
+  }
+  #profile-image {
     img {
-      max-width: 170%;
+      max-width: 180%;
       max-height: 100%;
     }
   }
   #fun-image {
-    border-radius: 50%;
-    overflow: hidden;
-    grid-row: 3;
-    grid-column: 2;
-    border: solid 3px black;
-    margin-top: 5%;
     img {
       max-width: 180%;
       max-height: 100%;
@@ -102,7 +98,7 @@ $primary-lightest: #f0673a;
   }
   #bio-text {
     border: solid 1px black;
-    grid-column: 1 / span 3;
+
     background-color: $primary-darkest;
     color: white;
     border-radius: 5px;
@@ -111,7 +107,8 @@ $primary-lightest: #f0673a;
   }
 }
 #slide-2 {
-  grid-template-rows: 50vh 50vh 50vh;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 3fr));
+  grid-template-rows: repeat(auto-fill, auto);
   .card {
     height: 100%;
     font-size: 1em;
