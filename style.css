@@ -15,8 +15,8 @@
   display: grid;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -ms-grid-columns: [bio] 1fr [skills] 1fr [projects] 1fr [contact] 1fr;
-      grid-template-columns: [bio] 1fr [skills] 1fr [projects] 1fr [contact] 1fr;
+  -ms-grid-columns: [home] 1fr [bio] 1fr [skills] 1fr [projects] 1fr [contact] 1fr;
+      grid-template-columns: [home] 1fr [bio] 1fr [skills] 1fr [projects] 1fr [contact] 1fr;
   background-color: #870c35;
   height: 5vh;
   width: 100vw;
@@ -36,6 +36,10 @@
 #nav .active,
 #nav .nav-link:hover {
   background-color: #870c35;
+}
+
+#nav #home-nav {
+  grid-area: home;
 }
 
 #nav #bio-nav {
@@ -87,6 +91,17 @@
       grid-template-rows: repeat(auto-fill, auto);
   grid-row-gap: 1%;
   grid-column-gap: 10px;
+}
+
+#slide-0 h1 {
+  font-weight: 900;
+  padding-top: 10%;
+  font-size: 10vw;
+}
+
+#slide-0 h2 {
+  padding: 5%;
+  font-size: 3vw;
 }
 
 #slide-1 {
