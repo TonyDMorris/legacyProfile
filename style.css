@@ -82,7 +82,6 @@
       flex-shrink: 0;
   height: 100%;
   scroll-snap-align: start;
-  padding: 15px;
   padding-top: 10vh;
   display: -ms-grid;
   display: grid;
@@ -93,14 +92,20 @@
   grid-column-gap: 10px;
 }
 
+#slide-0 {
+  height: 100vh;
+  background-image: url("./images/107100.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #slide-0 h1 {
-  font-weight: 900;
+  font-weight: 700;
   padding-top: 10%;
   font-size: 10vw;
 }
 
 #slide-0 h2 {
-  padding: 5%;
   font-size: 3vw;
 }
 

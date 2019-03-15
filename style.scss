@@ -71,7 +71,7 @@ $primary-lightest: #f0673a;
     flex-shrink: 0;
     height: 100%;
     scroll-snap-align: start;
-    padding: 15px;
+
     padding-top: 10vh;
     display: grid;
     background-color: $primary;
@@ -81,13 +81,16 @@ $primary-lightest: #f0673a;
   }
 }
 #slide-0 {
+  height: 100vh;
+  background-image: url("./images/107100.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   h1 {
-    font-weight: 900;
+    font-weight: 700;
     padding-top: 10%;
     font-size: 10vw;
   }
   h2 {
-    padding: 5%;
     font-size: 3vw;
   }
 }
