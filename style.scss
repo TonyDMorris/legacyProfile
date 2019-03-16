@@ -101,27 +101,26 @@ body {
 }
 #slide-1 {
   box-sizing: unset;
-  grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
-  grid-row-gap: 10%;
+  // grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-row-gap: 10px;
 
   .bio-images {
-    height: 310px;
-    width: 310px;
+    height: 100vw;
+    width: 100vw;
+    padding-top: 90%;
     border-radius: 50%;
     overflow: hidden;
-    border: solid 8px $primary-darkest;
+    border: solid 20px $primary-darkest;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   #profile-image {
-    img {
-      max-width: 180%;
-      max-height: 100%;
-    }
+    background-image: url("images/13241408_10157029671680171_1565092430260157058_n.jpg");
   }
   #fun-image {
-    img {
-      max-width: 180%;
-      max-height: 110%;
-    }
+    background-image: url("images/27541072_10160100871970171_4890414786619596054_n.jpg");
   }
   .bio-text {
     border: solid 1px black;
@@ -189,15 +188,16 @@ body {
   grid-template-columns: 1fr;
 
   @media only screen and (min-width: 700px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .project-card {
     margin: 5%;
     margin-top: 0%;
-    height: 90vh;
+    height: 50vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 6fr 5fr 1fr;
+    grid-template-rows: 8fr 5fr 1fr;
+    border-radius: 10px;
 
     border: 10px solid $primary-lightest;
     font-size: 1em;
